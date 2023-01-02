@@ -1,7 +1,9 @@
-# Parallel BFS with CUDA
+#BTP 
+Parallel BFS with CUDA
 
-This projects aims to implement Breadth First Search Algorithm on CUDA which would outperform simple sequential implementation.
+Our project is to implement Breadth First Search Algorithm on CUDA which would outperform simple sequential implementation.
 
+We have used the following research paper for our refrences. 
 Nvidia paper: https://research.nvidia.com/publication/scalable-gpu-graph-traversal (Merrill, Garland, Grimshaw)
 
 ## Goals:
