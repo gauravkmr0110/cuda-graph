@@ -57,7 +57,7 @@ public:
 
 
 // Tests speed of a BFS algorithm
-int main() {  // TODO: Add arguments to main program (type of graph, file path)
+int main() { 
 	Graph G(AdjacencyList, Directed);
 	int startVertex;
 	vector<int> distance;
@@ -82,7 +82,7 @@ int main() {  // TODO: Add arguments to main program (type of graph, file path)
 	bfsGPU(startVertex, G, distance, visited);
 	endTime = std::chrono::steady_clock::now();
 	duration = chrono::duration_cast<chrono::milliseconds>(endTime - startTime).count();
-	printf("Elapsed time for naive linear GPU implementation (with graph copying) : %li ms.\n", duration);
+	printf("Elapsed time for naive linear GPU implementation : %li ms.\n", duration);
 
 	checker.check(distance);
 
@@ -92,7 +92,7 @@ int main() {  // TODO: Add arguments to main program (type of graph, file path)
 	bfsGPUQuadratic(startVertex, G, distance, visited);
 	endTime = std::chrono::steady_clock::now();
 	duration = chrono::duration_cast<chrono::milliseconds>(endTime - startTime).count();
-	printf("Elapsed time for quadratic GPU implementation (with graph copying) : %li ms.\n", duration);
+	printf("Elapsed time for quadratic GPU implementation : %li ms.\n", duration);
 
 	checker.check(distance);
 //	print(distance);
